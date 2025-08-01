@@ -17,7 +17,7 @@ API_ID = int(os.getenv('API_ID'))
 API_HASH = os.getenv('API_HASH')
 TARGET = os.getenv('TARGET')  # يمكن أن يكون ID رقمي أو username (بدون @)
 
-client = TelegramClient("forwarder_session", API_ID, API_HASH)
+client = TelegramClient("anon", API_ID, API_HASH)
 
 @client.on(events.NewMessage(incoming=True))
 async def forward_message(event):
